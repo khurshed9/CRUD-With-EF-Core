@@ -2,6 +2,7 @@
 using CrudWithEfCore.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CrudWithEfCore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241005065700_rename_properties_name")]
+    partial class rename_properties_name
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,8 +39,7 @@ namespace CrudWithEfCore.Migrations
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasMaxLength(6)
-                        .HasColumnType("character varying(6)")
+                        .HasColumnType("text")
                         .HasColumnName("gender");
 
                     b.Property<string>("Name")
@@ -45,36 +47,9 @@ namespace CrudWithEfCore.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name");
 
-                    b.HasKey("Id")
-                        .HasName("personsPrimaryKey");
+                    b.HasKey("Id");
 
-                    b.ToTable("People", null, t =>
-                        {
-                            t.HasCheckConstraint("ageConstraint", "age > 10 and age < 60");
-                        });
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 20,
-                            Age = 30,
-                            Gender = "Male",
-                            Name = "John Doe"
-                        },
-                        new
-                        {
-                            Id = 21,
-                            Age = 25,
-                            Gender = "Female",
-                            Name = "Jane Doe"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            Age = 35,
-                            Gender = "Male",
-                            Name = "Mike Doe"
-                        });
+                    b.ToTable("People", (string)null);
                 });
 #pragma warning restore 612, 618
         }

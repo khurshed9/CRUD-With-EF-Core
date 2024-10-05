@@ -1,6 +1,4 @@
-using CrudWithEfCore.DataContext;
 using CrudWithEfCore.ExtensionMethods;
-using CrudWithEfCore.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

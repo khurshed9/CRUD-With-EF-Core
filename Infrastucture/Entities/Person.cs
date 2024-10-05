@@ -7,10 +7,13 @@ public class Person
     [Key]
     public int Id { get; set; }
 
-    public string Name { get; set; } = null!;
+    [Required]
+    public string Name { get; set; }
 
+    [Required]
     public int Age { get; set; }
 
-    public string Gender { get; set; } = null!;
+    [Required]
+    public string Gender { get; set; }
 
 }

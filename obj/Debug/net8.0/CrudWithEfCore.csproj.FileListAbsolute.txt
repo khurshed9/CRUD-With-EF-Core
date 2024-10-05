@@ -103,3 +103,4 @@ C:\Users\VICTUS\Desktop\.Net\W3\CrudWithEfCore\bin\Debug\net8.0\ru\Microsoft.Cod
 C:\Users\VICTUS\Desktop\.Net\W3\CrudWithEfCore\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\VICTUS\Desktop\.Net\W3\CrudWithEfCore\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\VICTUS\Desktop\.Net\W3\CrudWithEfCore\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\VICTUS\Desktop\.Net\W3\CrudWithEfCore\obj\Debug\net8.0\CrudWithEfCore.sourcelink.json
